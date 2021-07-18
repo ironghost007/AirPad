@@ -56,17 +56,6 @@ def f_status_indicator(R_lmList):
     else:
         action_status.append(0)
 
-    # for tip in range(4):
-    #     if R_lmList[f_tips[tip]][2] < R_lmList[f_tips[tip] - 3][2]:
-    #         action_status.append(1)
-    #     else:
-    #         action_status.append(0)
-    #
-    # if R_lmList[f_tips[-1]][1] < R_lmList[f_tips[-3]][1]:
-    #     action_status.append(1)
-    # else:
-    #     action_status.append(0)
-
     return action_status
 
 
