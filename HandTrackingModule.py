@@ -3,7 +3,7 @@ import mediapipe as mp
 import time
 from numba import jit, cuda
 
-# @jit(target="cuda")
+
 class handDetector:
     def __init__(self, mode=False, maxHands=2, detectionCon=0.7, trackingCon=0.7):
         self.mode = mode
@@ -51,8 +51,6 @@ class handDetector:
         if self.results.multi_hand_landmarks:
             for handedness in self.results.multi_handedness:
                 for h in handedness.classification:
-                    # print(h.label)
-                    # cv2.putText(flipped, h.label, (500, 40), cv2.FONT_ITALIC, 1, (0, 0, 0), 3)
                     hd = h.label
 
         return hd
